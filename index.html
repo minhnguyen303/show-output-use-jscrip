@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show output alert</title>
+</head>
+<script>
+    function showMessage(way){
+        switch (way){
+            case "uAlert":
+                alert('Xin chào!');
+                break;
+            case "uTag":
+                document.getElementById(way).innerHTML = 'Xin chào!';
+                break;
+            case "uDocWri":
+                document.write('Xin chào!');
+                break;
+            case "uCosLog":
+                console.log('Xin chào!');
+                break;
+            default:
+                break;
+        }
+    }
+</script>
+<body>
+<table>
+    <tr>
+        <td>
+            <button id="uAlert" onclick="showMessage('uAlert')">Sử dụng hàm alert()</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button id="uTag" onclick="showMessage('uTag')">Sử dụng thẻ HTML</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button id="uCosLog" onclick="showMessage('uCosLog')">Sử dụng hàm console.log()</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button id="uDocWri" onclick="showMessage('uDocWri')">Sử dụng hàm document.write()</button>
+        </td>
+    </tr>
+</table>
+</body>
+<style>
+
+    table{
+        margin: 15% 40%;
+        border: dotted
+    }
+
+    button{
+        width: 100%;
+        height: 50px;
+        align-content: center;
+    }
+
+</style>
+</html>
